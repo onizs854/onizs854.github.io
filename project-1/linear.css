@@ -1,0 +1,63 @@
+.regtext {
+	font-size: 5vw;
+	text-align: left;
+	margin-top: 200px;
+	margin-bottom: 200px;
+	margin-left: 300px;
+	margin-right: 300px;
+	font-family: arial;
+}
+
+.BeforeScroll {
+	height: 100px;
+	width: 100%;
+	display: none;
+	position: absolute;
+	font-size: 10vw;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: arial black;
+	font-weight: bold;
+	color: red;
+	-webkit-animation: blink-animation 0.6s steps(5, start) infinite;
+}
+	@keyframes blink-animation {
+		to {visibility: hidden;}
+	}
+
+.scroll {
+	font-family: arial black;
+	color: red;
+	margin-left: 50%;
+	margin-right: 50%;
+	text-transform: uppercase;
+	padding-bottom: 50px;
+	
+}
+
+#one, #four, #seven, #ten, #thirteen {
+	position: absolute;
+	margin-top: -150px;
+}
+
+#two, #five, #eight, #eleven, #fourteen {
+	position: absolute;
+	margin-top: -400px;
+}
+
+#three, #six, #nine, #twelve, #fifteen {
+	position: absolute;
+	margin-top: 200px;
+}
+
+#sixteen, #seventeen, #eighteen, #nineteen, #twenty, #processed, #risk {
+	margin-top: 500px;
+}
+
+#top {
+	margin-top: 0px;
+}
+
+#consumption {
+	margin-top: 350px;
+}

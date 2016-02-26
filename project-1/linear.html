@@ -1,0 +1,366 @@
+<html>
+<head>
+	<title>World Health Organization</title>
+</head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="linear.css">
+
+<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script type="text/javascript">
+
+function BeforeScroll(){
+var divsize = ((Math.random()*100) + 50).toFixed();
+var color = '#'+ Math.round(0xffffff * Math.random()).toString(16);
+$newdiv = $('.BeforeScroll').css({
+    'width':divsize+'px',
+    'height':divsize+'px',
+    'background-color': color
+});
+
+var posx = (Math.random() * ($(document).width() - divsize)).toFixed();
+var posy = (Math.random() * ($(document).height() - divsize)).toFixed();
+
+$newdiv.css({
+    'position':'absolute',
+    'left':posx+'px',
+    'top':posy+'px',
+    'display':'none'
+}).appendTo( 'body' ).fadeIn(100);
+};
+
+</script>
+
+<script>
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 680) {
+			$("#one").show();
+		} else {
+			$('#one').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 1300) {
+			$("#two").show();
+		} else {
+			$('#two').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 2000) {
+			$("#three").show();
+		} else {
+			$('#three').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 3000) {
+			$("#sixteen").show();
+		} else {
+			$('#sixteen').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 1600) {
+			$("#four").show();
+		} else {
+			$('#four').hide;
+		}
+	});
+});
+
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 2900) {
+			$("#five").show();
+		} else {
+			$('#five').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 3100) {
+			$("#six").show();
+		} else {
+			$('#six').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 6000) {
+			$("#seventeen").show();
+		} else {
+			$('#seventeen').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 2400) {
+			$("#seven").show();
+		} else {
+			$('#seven').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 4000) {
+			$("#eight").show();
+		} else {
+			$('#eight').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 5000) {
+			$("#nine").show();
+		} else {
+			$('#nine').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 6000) {
+			$("#eighteen").show();
+		} else {
+			$('#eighteen').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 3500) {
+			$("#ten").show();
+		} else {
+			$('#ten').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 5000) {
+			$("#eleven").show();
+		} else {
+			$('#eleven').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 5500) {
+			$("#twelve").show();
+		} else {
+			$('#twelve').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 6000) {
+			$("#nineteen").show();
+		} else {
+			$('#nineteen').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 5000) {
+			$("#thirteen").show();
+		} else {
+			$('#thirteen').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 6500) {
+			$("#fourteen").show();
+		} else {
+			$('#fourteen').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 7000) {
+			$("#fifteen").show();
+		} else {
+			$('#fifteen').hide;
+		}
+	});
+});
+
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 7000) {
+			$("#twenty").show();
+		} else {
+			$('#twenty').hide;
+		}
+	});
+});
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.scroll').fadeIn();
+        } else {
+            $('.scroll').fadeOut();
+        }
+    });
+
+    $('.scroll').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 10000);
+        return false;
+    });
+
+});
+
+</script>
+
+<body>
+
+	<div class="regtext" id="top">
+		After thoroughly reviewing the accumulated scientific literature, a Working Group of 22 experts from 10 countries convened by the IARC Monographs Programme classified the consumption of red meat as probably
+	</div>
+
+<div class="BeforeScroll" id="one">
+	carcinogenic to humans
+</div>
+</br>
+<div class="BeforeScroll" id="two">
+	carcinogenic to humans
+</div>
+</br>
+<div class="BeforeScroll" id="three">
+	carcinogenic to humans
+</div>
+</br>
+<div class="BeforeScroll" id="sixteen">
+	carcinogenic to humans
+</div>
+
+	<div class="regtext">
+		based on limited evidence that the consumption of red meat causes cancer in humans and strong mechanistic evidence supporting a carcinogenic effect. This association was observed mainly for
+	</div>
+
+<div class="BeforeScroll" id="four">
+	colorectal cancer
+</div>
+</br>
+<div class="BeforeScroll" id="five">
+	colorectal cancer
+</div>
+</br>
+<div class="BeforeScroll" id="six">
+	colorectal cancer
+</div>
+</br>
+<div class="BeforeScroll" id="seventeen">
+	colorectal cancer
+</div>
+
+	<div class="regtext">
+		but associations were also seen for
+	</div>
+
+<div class="BeforeScroll" id="seven">
+	pancreatic cancer and prostate cancer.
+</div>
+</br>
+<div class="BeforeScroll" id="eight">
+	pancreatic cancer and prostate cancer.
+</div>
+</br>
+<div class="BeforeScroll" id="nine">
+	pancreatic cancer and prostate cancer.
+</div>
+</br>
+<div class="BeforeScroll" id="seventeen">
+	pancreatic cancer and prostate cancer.
+</div>
+
+	<div class="regtext" id="processed">
+		Processed meat was classified as carcinogenic to humans (Group 1), based on sufficient evidence in humans that the consumption of processed meat
+	</div>
+
+<div class="BeforeScroll" id="ten">
+	causes colorectal cancer. 
+</div>
+</br>
+<div class="BeforeScroll" id="eleven">
+	causes colorectal cancer. 
+</div>
+</br>
+<div class="BeforeScroll" id="twelve">
+	causes colorectal cancer.
+</div>
+</br>
+<div class="BeforeScroll" id="eighteen">
+	causes colorectal cancer.
+</div>
+
+	<div class="regtext" id="consumption">
+		The consumption of meat varies greatly between countries, with from a few percent up to 100% of people eating red meat, depending on the country, and somewhat lower proportions eating processed meat. The experts concluded that each 50 gram portion of processed meat eaten daily
+	</div>
+
+<div class="BeforeScroll" id="thirteen">
+	increases the risk of colorectal cancer by 18% 
+</div>
+</br>
+<div class="BeforeScroll" id="fourteen">
+	increases the risk of colorectal cancer by 18% 
+</div>
+</br>
+<div class="BeforeScroll" id="fifteen">
+	increases the risk of colorectal cancer by 18%
+</div>
+</br>
+<div class="BeforeScroll" id="twenty">
+	increases the risk of colorectal cancer by 18%
+</div>
+
+	<div class="regtext" id="risk">
+		“For an individual, the risk of developing colorectal cancer because of their consumption of processed meat remains small, but this risk increases with the amount of meat consumed,” says Dr Kurt Straif, Head of the IARC Monographs Programme. “In view of the large number of people who consume processed meat, the global impact on cancer incidence is of public health importance.” The IARC Working Group considered more than 800 studies that investigated associations of more than a dozen types of cancer with the consumption of red meat or processed meat in many countries and populations with diverse diets. The most influential evidence came from large prospective cohort studies conducted over the past 20 years. ”These findings further support current public health recommendations to limit intake of meat,” says Dr Christopher Wild, Director of IARC. “At the same time, red meat has nutritional value. Therefore, these results are important in enabling governments and international regulatory agencies to conduct risk assessments, in order to balance the risks and benefits of eating red meat and processed meat and to provide the best possible dietary recommendations.”
+	</div>
+
+
+<a href="#" class="scroll">Done&nbsp;reading?</a></article>
+
+</body>
+</html>

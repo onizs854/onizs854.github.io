@@ -1,0 +1,242 @@
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<title></title>
+</head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="nonlinear.css">
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+<body>
+
+	Lyon, France, 26 October 2015 – The International Agency for Research on Cancer (IARC), the cancer agency of the World Health Organization, has evaluated the carcinogenicity of the consumption of red meat and processed meat.
+
+</br>
+</br>
+</br>
+
+	After thoroughly reviewing the accumulated sceintific literature, <div class="white">a working Group of 22 experts from 10 countries convened by the IARC Monographs programme classified the consumption of red meat as probably carcinogenic to humans,</div> based on limited evidence that <div class="white">the consumption of red meat causes cancer in humans</div> and strong mechanistic evidence supporting a carcinogenic effect. This association was observed mainly for colorectal cancer, but associations were also seen for pancreatic cancer and prostate cancer.
+
+</br>
+</br>
+</br>
+</br>
+</br>
+
+	<div class="white">Processed meat was classified as carcinogenic to humans,</div> based on sufficient evidence in humans that the consumption of processed meat causes colorectal cancer.
+
+</br>
+</br>
+
+	The consumption of meat varies greatly between countries, with from a few percent up to 100% of people eating red meat, depending on the country, and somewhat lower proportions eating processed meat. The experts concluded that <div class="white">each 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by 18%.</div>
+
+</br>
+</br>
+</br>
+
+	For an individual, the risk of developing colorectal cancer because of their consumption of processed meat remains small, but this risk increases with the amount of meat consumed,” says Dr Kurt Straif, Head of the IARC Monographs Programme. “In view of the large number of people who consume processed meat, <div class="white">the global impact on cancer incidence is of public health importance.</div>
+
+</br>
+</br>
+
+	The IARC Working Group considered more than 800 studies that investigated associations of more than a dozen types of cancer with the consumption of red meat or processed meat in many countries and populations with diverse diets. The most influential evidence came from large prospective cohort studies conducted over the past 20 years."
+
+</br>
+</br>
+
+	These findings further support current public health recommendations to limit intake of meat,” says Dr Christopher Wild, Director of IARC. “At the same time, red meat has nutritional value. Therefore, these results are important in enabling governments and international regulatory agencies to conduct risk assessments, in order to balance the risks and benefits of eating red meat and processed meat and to provide the best possible dietary recommendations."
+
+</br>
+</br>
+
+</body>
+
+<div id="firstb" class="boxes">
+	<button onclick="one()">meat</button>
+</div>
+
+<div id="secondb" class="boxes">
+	<button onclick="two()">cancer</button>
+</div>
+
+<div id="thirdb" class="boxes">
+	<button onclick="three()">meat</button>
+</div>
+
+<div id="fourthb" class="boxes">
+	<button onclick="four()">cancer</button>
+</div>
+
+<div id="fifthb" class="boxes">
+	<button onclick="five()">meat</button>
+</div>
+
+	<div class="draggable" id="textone"></div>
+	<div class="draggable" id="texttwo"></div>
+	<div class="draggable" id="textthree"></div>
+	<div class="draggable" id="textfour"></div>
+	<div class="draggable" id="textfive"></div>
+
+<script>
+
+var boxDims = new Array();
+
+function setRandomPos(elements){
+  elements.each(function(){
+    var conflict = true;
+    while (conflict) {
+        fixLeft = Math.round(Math.random()*($(window).width()-400))+40;
+		fixTop = Math.round(Math.random()*($(window).height()-50))+40;
+        $(this).offset({
+            left: fixLeft,
+            top: fixTop
+        });
+        var box = {
+            top: parseInt(window.getComputedStyle($(this)[0]).top),
+            left: parseInt(window.getComputedStyle($(this)[0]).left),
+            width: parseInt(window.getComputedStyle($(this)[0]).width),
+            height: parseInt(window.getComputedStyle($(this)[0]).height)
+        }
+        conflict = false;
+        for (var i=0;i<boxDims.length;i++) {
+            if (overlap(box,boxDims[i])) {
+                conflict = true;
+                break;
+            } else {
+                conflict = false;
+            }                   
+        }
+    }
+    boxDims.push(box)
+
+  });
+}
+
+function overlap(box1,box2) {
+  var x1 = box1.left
+  var y1 = box2.top;
+  var h1 = box1.height;
+  var w1 = box1.width;
+  var b1 = y1 + h1;
+  var r1 = x1 + w1;
+  var x2 = box1.left;
+  var y2 = box1.top;
+  var h2 = box1.height;
+  var w2 = box1.width;
+  var b2 = y2 + h2;
+  var r2 = x2 + w2;
+
+  var buf = 24;
+
+  if (b1 + buf < y2 || y1 > b2 + buf || r1 + buf < x2 || x1 > r2 + buf) return false;
+  return true;
+}
+
+setRandomPos($(".boxes"),40,40);
+
+</script>
+<script>
+function one() {
+		alert("a working Group of 22 experts from 10 countries convened by the IARC Monographs programme classified the consumption of red meat as probably carcinogenic to humans,");
+
+		$('#textone').html('<div class="hide">After thoroughly reviewing the accumulated scientific literature,</div> a working Group of 22 experts from 10 countries convened by the IARC Monographs programme classified the consumption of red meat as probably carcinogenic to humans');
+
+		$('.draggable').draggable();
+	};
+  
+ function two() {
+		alert("the consumption of red meat causes cancer in humans");
+
+		$('#texttwo').html('<div class="hide">limited evidence that,</div>the consumption of red meat causes cancer in humans');
+
+		$('.draggable').draggable();
+	};
+  
+function three() {
+		alert("Processed meat was classified as carcinogenic to humans,");
+
+		$('#textthree').html('Processed meat was classified as carcinogenic to humans,');
+
+		$('.draggable').draggable();
+	};
+  
+
+function four() {
+		alert("each 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by 18%.");
+
+		$('#textfour').html('<div class="hide">depending on the country, and somewhat lower proportions eating processed meat. The experts concluded that</div> each 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by 18%.');
+
+		$('.draggable').draggable();
+
+	};
+  
+function five(){
+		alert("the global impact on cancer incidence is of public health importance.");
+
+		$('#textfive').html('<div class="hide">In view of the large number of people who consume processed meat, </div> the global impact on cancer incidence is of public health importance.');
+
+		$('.draggable').draggable();
+
+	};
+
+var boxDims = new Array();
+
+function setRandomPos(elements){
+  elements.each(function(){
+    var conflict = true;
+    while (conflict) {
+        fixLeft = Math.round(Math.random()*($(window).width()-400))+40;
+		fixTop = Math.round(Math.random()*($(window).height()-50))+40;
+        $(this).offset({
+            left: fixLeft,
+            top: fixTop
+        });
+        var box = {
+            top: parseInt(window.getComputedStyle($(this)[0]).top),
+            left: parseInt(window.getComputedStyle($(this)[0]).left),
+            width: parseInt(window.getComputedStyle($(this)[0]).width),
+            height: parseInt(window.getComputedStyle($(this)[0]).height)
+        }
+        conflict = false;
+        for (var i=0;i<boxDims.length;i++) {
+            if (overlap(box,boxDims[i])) {
+                conflict = true;
+                break;
+            } else {
+                conflict = false;
+            }                   
+        }
+    }
+    boxDims.push(box)
+
+  });
+}
+
+function overlap(box1,box2) {
+  var x1 = box1.left
+  var y1 = box2.top;
+  var h1 = box1.height;
+  var w1 = box1.width;
+  var b1 = y1 + h1;
+  var r1 = x1 + w1;
+  var x2 = box1.left;
+  var y2 = box1.top;
+  var h2 = box1.height;
+  var w2 = box1.width;
+  var b2 = y2 + h2;
+  var r2 = x2 + w2;
+
+  var buf = 24;
+
+  if (b1 + buf < y2 || y1 > b2 + buf || r1 + buf < x2 || x1 > r2 + buf) return false;
+  return true;
+}
+
+setRandomPos($(".draggable"),40,40);
+
+</script>
+
+
+
+</html>

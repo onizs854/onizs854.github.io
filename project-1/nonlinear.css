@@ -1,0 +1,28 @@
+body {
+	padding: 150px;
+	position: absolute;
+	margin: 0px auto;
+	width: 800px;
+}
+
+.white {
+	color: #FFFFFF;
+	display: inline;
+}
+
+.hide {
+	visibility: hidden;
+	display: inline;
+}
+
+.buttons {
+	text-align: center;
+}
+
+.draggable {
+	-webkit-animation: blink-animation 1.0s steps(5, start) infinite;
+}
+	@keyframes blink-animation {
+		to {visibility: hidden;}
+	}
+}
