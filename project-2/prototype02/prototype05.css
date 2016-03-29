@@ -1,0 +1,55 @@
+#title {
+	font-family: futura;
+	color: white;
+	font-size: 60px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+.first {
+	background-color: red;
+	width: 100%;
+	height: 100%;
+}
+
+.second {
+	background-color: yellow;
+	font-family: helvetica;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.third {
+	background-color: pink;
+	font-family: helvetica;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.fourth {
+	background-color: #37A4ED;
+	font-family: helvetica;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.fifth {
+	background: url('http://media2.giphy.com/media/ZmdErsWqppgMo/giphy.gif') no-repeat center center;
+	min-height: 100%;
+	background-size: cover;
+	display: none;
+}
+
+.sixth {
+	background: url('http://57.media.tumblr.com/c94f80bf66f98031b676a52ce1f75116/tumblr_n0x3n7wjvE1rk9vano1_500.gif') no-repeat center center;
+	min-height: 100%;
+	background-size: cover;
+	display: none;
+}

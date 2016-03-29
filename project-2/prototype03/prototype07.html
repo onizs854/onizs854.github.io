@@ -1,0 +1,65 @@
+<html>
+	<title>prototype 07</title>
+<head>
+  <meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <link rel="stylesheet" href="prototype07.css">
+  <link href="LeagueGothic-Italic.otf" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <h1>
+    Aperture / Parsons Artist Talk:</br>
+    <div id="subHead">Dru Donovan</div>
+  </h1>
+
+</br></br></br></br></br></br>
+
+<div class="imgContainer">
+  <img src="https://clisawrite.files.wordpress.com/2014/06/18_donovan_dru_work_samples-default.jpg?w=640&h=512" alt="" />
+  <img src="https://turnstylenews.com/wp-content/uploads/2011/04/003_Dru_Donovan.jpg" alt="" />
+  <img src="http://www.americansuburbx.com/wp-content/uploads/2011/10/Donovan_07-Custom.jpg" alt="" />
+  <img src="https://turnstylenews.com/wp-content/uploads/2011/04/006_Dru_Donovan.jpg" alt="" />
+  <img src="https://clisawrite.files.wordpress.com/2014/06/20_donovan_dru_work_samples-default.jpg" alt="" />
+  <img src="https://clisawrite.files.wordpress.com/2014/06/11_donovan_dru_work_samples-default.jpg" alt="" />
+</div>
+
+<div class="textContainer">
+  <div id="firstInfo">
+  	Aperture Foundation, in collaboration with the Department of Photography at Parsons School Design, is pleased to present an artist talk with Dru Donovan.
+  </div>
+
+  <div id="secondInfo">
+    Donovan's images bring into question how we care for ourselves and others, using construction and reenactment to align personal experience with universal understanding. In her 2011 book Lifting Water, Donovan investigates rituals of caregiving and issues surrounding illness and loss, by constructing scenes in which models re-enact her experience of caring for a friend with a terminal illness. In the "Performance" issue of Aperture magazine, author and editor Brian Dillon writes in reference to Lifting Water, "Working with a variety of formats-view camera, digital SLR, 35 mm point-and-shoot-Donovan essays a typology of vulnerable, tender, and exhausting poses . . . [She] has long been exercised by the theatrics of pain and passivity."
+  </div>
+
+  <div id="thirdInfo">
+    This program is supported, in part, by public funds from the New York City Department of Cultural Affairs in partnership with the City Council, New York State Council on the Arts with support of Governor Andrew Cuomo and the New York State Legislature, The Andy Warhol Foundation for the Visual Arts, Charina Endowment Fund, William Talbott Hillman Foundation, Inc., and the Board of Trustees and Members of Aperture Foundation.
+  </div>
+
+  <div id="fourthInfo">
+    Dru Donovan born in St. Paul Minnesota, received an MFA from Yale School of Art in 2009, after earning a BFA in photography from the California College of the Arts in 2004. Her work has been included in reGeneration2: Tomorrow's Photographers Today, at the Musée de l'Elysée, Lausanne, Switzerland; the 2010 California Biennial at the Orange County Museum of Art; and the 2015 Expanded Geographies Lianzhou Foto Festival, Lianzhou, China. Her first book, Lifting Water, was published in 2011. From 2011 to 2012, she was a Lower Manhattan Cultural Council Workspace resident. Donovan's work has been included in many group shows, including at Fraenkel Gallery, San Francisco; Yancey Richardson Gallery, New York; Know More Games, Brooklyn; and Brancolini Grimaldi, London. Her work has been published in Blind Spot, The Photographer's Playbook (Aperture, 2014), Columbia Art and Literature Journal, Vice, Picture Magazine, Matte, and Aperture. In August 2015, Donovan's solo show Carving the Lung opened at Hap Gallery, Portland, Oregon. She is a 2016 recipient of a John Gutmann Photography Fellowship.
+  </div>
+
+  <div id="fifthInfo">
+    $5 DONATION </br></br></br>
+    This event is free for students with ID and Aperture Members at the $50 level and above.
+  </div>
+</div>
+
+</body>
+
+<script>
+$(window).scroll(function() {
+  var windowH = $(window).height(),
+    scrollY = $(window).scrollTop();
+  $('img').each(function() {
+    var imgPosition = $(this).offset().top;
+    if (scrollY > imgPosition - windowH) {
+      $(this).addClass("img-blur");
+    }
+  });
+});
+
+</script>
+</html>

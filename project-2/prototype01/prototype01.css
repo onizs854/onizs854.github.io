@@ -1,0 +1,37 @@
+#container {
+	width: 100vh;
+	height: 100vh;
+	display: block;
+	position: absolute;
+}
+
+img {
+	width: 20vw;
+	position: fixed;
+}
+
+.square {
+	width: 150px;
+	height: 150px;
+	background-color: pink;
+	font-family: helvetica;
+	letter-spacing: 4px;
+	font-size: 1em;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;	
+	line-height: 150px;
+}
+
+body {
+	text-align: center;
+	margin: 100px;
+	line-height: 500%;
+	font-size: 100px;
+	font-family: futura;
+	color: beige;
+}

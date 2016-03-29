@@ -1,0 +1,149 @@
+<html>
+<head>
+	<title>Prototype 01</title>
+</head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="prototype01.css">
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+	<div id="container">
+		<img src="http://pngimg.com/upload/banana_PNG842.png">
+		<img src="http://vignette1.wikia.nocookie.net/nintendo/images/1/1e/Mario_SSB4_Artwork.png/revision/latest?cb=20131230010934&path-prefix=en">
+		<img src="http://images.clipartpanda.com/music-notes-clip-art-png-MUSIC.png">
+		<img src="http://pngimg.com/upload/horse_PNG2539.png">
+		<img src="http://pngimg.com/upload/star_PNG1585.png">
+		<img src="http://vignette2.wikia.nocookie.net/lionking/images/0/06/Untitled-6.png/revision/latest?cb=20120808023755">
+		<img src="https://tctechcrunch2011.files.wordpress.com/2015/08/safe_image.gif">
+		<img src="https://img.buzzfeed.com/buzzfeed-static/static/2015-05/29/16/enhanced/webdr15/anigif_enhanced-buzz-11798-1432932541-5.gif">
+		<div class="square">yay</div>
+		<div class="square">prototype</div>
+		<div class="square">01</div>
+	</div>
+
+<script>
+	function randomFromTo(from, to){
+		return Math.floor(Math.random() * (to - from + 1) + from);
+	}
+  
+	function moveRandom(obj) {
+		var cpos = $('#container').offset();
+		var cheight = $('#container').height();
+		var cwidth = $('#container').width();
+		var pad = parseInt($('#container').css('padding-top').replace('px', ''));
+		var bheight = obj.height();
+		var bwidth = obj.width();
+
+		maxY = cpos.top + cheight - bheight - pad;
+		maxX = cpos.left + cwidth - bwidth - pad;
+		minY = cpos.top + pad;
+		minX = cpos.left + pad;
+		newY = randomFromTo(minY, maxY);
+		newX = randomFromTo(minX, maxX);
+			
+		obj.animate({
+			top: newY,
+			left: newX
+			}, 2000, function() {
+         moveRandom(obj);
+		});
+	}
+
+$('img').each(function() {
+	moveRandom($(this));
+});
+
+$('.square').each(function() {
+	moveRandom($(this));
+});
+</script>
+
+<body onscroll="scroll()">
+
+<p>
+	SCROLL
+</br>
+	A
+</br>
+	BUNCH
+</br>
+	OF
+</br>
+	RANDOM
+</br>
+	TEXT
+</br>
+	IN
+</br>
+	BIG
+</br>
+	LETTERS
+</br>
+	TO
+</br>
+	TAKE
+</br>
+	UP
+</br>
+	SPACE
+</br>
+	SO
+</br>
+	THAT
+</br>
+	I
+</br>
+	CAN
+</br>
+	SEE
+</br>
+	IF
+</br>
+	THIS
+</br>
+	JQUERY
+</br>
+	FUNCTION
+</br>
+	IS
+</br>
+	WORKING
+</br>
+	WHERE
+</br>
+	THE
+</br>
+	BACKGROUND
+</br>
+	COLOR
+</br>
+	CHANGES
+<p>
+
+</body>
+
+<script>
+var colors = [
+  [0, 100, 50],
+  [113, 100, 50],
+  [240, 100, 50],
+  [328, 100, 50]
+],
+
+body = document.getElementsByTagName('body')[0],
+length = colors.length,
+height = Math.round(body.offsetHeight / length);
+
+function scroll() {
+  var i = Math.floor(body.scrollTop / height),
+      d = body.scrollTop % height / height,
+      c1 = colors[i],
+      c2 = colors[(i+1)%length],
+      h = c1[0] + Math.round((c2[0] - c1[0]) * d),
+      s = c1[1] + Math.round((c2[1] - c1[1]) * d),
+      l = c1[2] + Math.round((c2[2] - c1[2]) * d);
+  body.style['background-color'] = ['hsl(', h, ', ', s+'%, ', l, '%)'].join('');
+}
+ </script>
+
+</body>
+</html>

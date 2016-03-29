@@ -1,0 +1,86 @@
+@font-face {
+  font-family: LeagueGothic-Italic; src: url('LeagueGothic-Italic.otf');
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-family: LeagueGothic-Italic;
+  font-size: 30px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#subHead {
+  font-size: 60px;
+}
+
+#theDate {
+  font-family: 'helvetica';
+  font-size: 20px;
+  margin-top: 100px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.imgContainer {
+  margin-top: 700px;
+}
+
+.textContainer {
+  font-family: 'Lucida Console', Monaco, monospace;
+  font-size: 14px;
+  color: #7B6FC9;
+  position: relative;
+  margin-left: 300px;
+  text-align: left;
+  line-height: 2.0;
+}
+
+#firstInfo {
+  margin-top: -4800px;
+  margin-bottom: 500px;
+}
+
+#secondInfo {
+  margin-bottom: 500px;
+}
+
+#thirdInfo {
+  margin-bottom: 600px;
+}
+
+#fourthInfo {
+  margin-bottom: 500px;
+}
+
+#fifthInfo {
+  margin-bottom: 300px;
+}
+
+img {
+  position: relative;
+  margin-bottom: 200px;
+  width: 50vw;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+}
+
+.img-blur {
+  animation: imageBlur 10s both;
+}
+@keyframes imageBlur {
+  100% {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+}
