@@ -66,7 +66,7 @@ span:hover {
   font-size: 1.5vw;
   color: #A6A6A6;
   position: relative;
-  margin-top: -4400px;
+  margin-top: -4800px;
   margin-left: 50%;
   text-align: left;
   line-height: 2.0;
@@ -90,7 +90,7 @@ span:hover {
 }
 
 #firstInfo, #secondInfo, #thirdInfo, #fourthInfo, #fifthInfo {
-  margin-bottom: 500px;
+  margin-bottom: 450px;
   position: relative;
 }
 
