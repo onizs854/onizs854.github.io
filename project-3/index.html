@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Chat</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="username-form">
+    <label>Enter a username to be decisive</label>
+    <input type="text" class="username-input">
+    <input class="submit-button" type="submit" value="submit">
+  </div>
+
+  <div class="container">
+    <div class="message-container">
+    </div>
+  </div>
+
+  <div class="color-input">
+    <div class="color-options">
+    <div class="timer">
+        <input type="hidden" id="set-time" value="1"/>
+        <div id="countdown">
+        <div id='tiles' class="color-full"></div>
+      </div>
+    </div>
+      <!-- <div class="annoyance"></div> -->
+      <div class="color-options-individual">
+      <a class="color-option museum"><img src="images/museum.png" id="vector"></a>
+      <a class="color-option coffee"><img src="images/coffee.png" id="vector"></a>
+      <a class="color-option park"><img src="images/park.png" id="vector"></a>
+      <a class="color-option shop"><img src="images/shop.png" id="vector"></a>
+      <a class="color-option drinks"><img src="images/drinks.png" id="vector"></a>
+      <a class="color-option homework"><img src="images/homework.png" id="vector"></a>
+      <a class="color-option food"><img src="images/food.png" id="vector"></a>
+      <a class="color-option movie"><img src="images/cinema.png" id="vector"></a>
+      <a class="color-option games"><img src="images/games.png" id="vector"></a>
+    </div>
+    </div>
+  </div>
+
+<div class="popup-outer">
+	<div class="popup">
+	<br><br>
+	  WE HAVE BEEN DECISIVE <br>
+	</div>
+</div>
+
+
+
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="https://s3.amazonaws.com/ci-sp-2016/ci-chat.js"></script>
+  <script src="main.js"></script>
+
+
+</body>
+</html>
