@@ -1,0 +1,38 @@
+body {
+	background-color: #C70A0A;
+}
+
+.head {
+	/*font-family: futura;*/
+	font-style: uppercase;
+	text-align: center;
+	font-size: 30px;
+	color: pink;
+	cursor: pointer;
+}
+
+#canvas {
+	height: 100%;
+	width: 100%;
+}
+
+#refresh {
+	/*font-family: courier;*/
+	color: white;
+	font-size: 30px;
+	letter-spacing: 6px;
+	/*text-transform: uppercase;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+
+	-webkit-user-select: none; /* Chrome/Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+}
